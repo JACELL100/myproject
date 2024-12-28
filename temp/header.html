@@ -1,0 +1,40 @@
+<nav class="navbar" >
+    <div class="logo">{{bdata}}</div>
+    {% for n in clist %}
+    <div>{{n}}</div>
+    {% endfor %}
+
+    <br/>
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+      </tr>
+
+      {% for d in student_details %}
+      <tr>
+        <th>{{d.name}}</th>
+        <th>{{d.phone}}</th>
+      </tr>
+      {% endfor %}
+
+      {% if numbers|length > 0 %}
+
+      {% for n in numbers %}
+      {% if n > 20 %}
+      <div>{{n}}</div>
+      {% endif %}
+      {% endfor %}
+      {% else %}
+       No Data Found
+      {% endif %}
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="/static/#navbar">Home</a></li>
+      <li><a href="/static/#about">About</a></li>
+      <li><a href="/static/dashindex">My Dashboard</a></li>
+      <li><a href="/static/login">Login</a></li>
+    </ul>
+  </nav>

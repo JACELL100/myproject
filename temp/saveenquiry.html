@@ -1,0 +1,22 @@
+<form method="POST" action="{% url 'saveenquiry' %}" id="saveenquiry" role="form" novalidate="novalidate" class="by-form">
+    {% csrf_token %}
+    <div class="form-group first-form boootn-sapce">
+      <input type="text" name="name" id="name" value="" required="" placeholder="Name" data-validation="text">
+    </div>
+    <div class="form-group first-form boootn-sapce">
+      <input type="text" name="email" id="email" value="" required="" placeholder="Email" data-validation="text">
+    </div>
+    <div class="form-group first-form boootn-sapce">
+      <input type="text" name="phone" id="phone" value="" required="" placeholder="Phone" data-validation="text">
+    </div>
+    <div class="form-group first-form boootn-sapce">
+      <input type="text" name="website" id="website" value="" required="" placeholder="Website" data-validation="text">
+    </div>
+    <div class="form-group first-form boootn-sapce">
+      <input type="text" name="message" id="message" value="" required="" placeholder="Message" data-validation="text">
+    </div>
+    
+    <button type="submit" class="btn">Submit</button>
+
+    <h1>{{n}}</h1>
+</form>

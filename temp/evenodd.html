@@ -1,0 +1,35 @@
+<section class="feature-area section-gap" id="service">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Even Odd Numbers</h1>
+                </div>
+            </div>
+        </div>
+    
+        <div class"row">
+            <div class="col-12">
+                <form method="post">
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        Please Enter The Value1
+                    </div>
+                    {% endif %}
+                    {% csrf_token %}
+                     {{form}}
+                    
+                        
+                        <label>Value1</label>
+                        <input type="text" name="num1"  class="form-control"/>
+                       
+                        <button type="submit">Even | Odd</button>
+                    
+                        <label>output</label>
+                        <input type="text" value="{{c}}" class="form-control"/>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    </section>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ destination.name }} - Details</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ destination.name }}</h1>
+    </header>
+    <section>
+        <img src="{{ destination.image.url }}" alt="{{ destination.name }}">
+        <p>{{ destination.description }}</p>
+
+        <h2>Available Accommodations</h2>
+        <ul>
+            {% for accommodation in accommodations %}
+                <li>
+                    <h3>{{ accommodation.name }}</h3>
+                    <p>Price per night: ${{ accommodation.price_per_night }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'plan_trip' destination.id %}">Plan Your Trip</a>
+    </section>
+</body>
+</html>
