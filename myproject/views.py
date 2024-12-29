@@ -5,17 +5,17 @@ from myapp.models import Service
 from news.models import News
 from saveenquiry.models import saveenquiry
 from django.core.paginator import Paginator 
-from django.core.mail import send_mail,EmailMultiAlternatives
+#from django.core.mail import send_mail,EmailMultiAlternatives
 
 
 def HomePage(request):
-    subject='Testing Mail'
-    from_email='figmajacell@gmail.com'
-    msg='<p>Welcome to <b>MYPROJECT</b></p>'
-    to='jacelljamble@gmail.com'
-    msg=EmailMultiAlternatives(subject,msg,from_email,[to])
-    msg.content_subtype='html'
-    msg.send()
+   # subject='Testing Mail'
+   # from_email='figmajacell@gmail.com'
+   # msg='<p>Welcome to <b>MYPROJECT</b></p>'
+   # to='jacelljamble@gmail.com'
+   # msg=EmailMultiAlternatives(subject,msg,from_email,[to])
+   # msg.content_subtype='html'
+   # msg.send()
     
    # send_mail(
    # 'Testing Mail',
